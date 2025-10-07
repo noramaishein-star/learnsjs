@@ -1,30 +1,36 @@
-console.log(1 + 2);
-let num = 1;
-console.log(num);
-num = num + 2;
-console.log(num);
-num = num - 1;
-console.log(num);
-num = num * 2;
-console.log(num);
-num = num / 3;
-console.log(num);
-num = 3;
-num = num ** 3;
-console.log(num);
-num = 9;
-num = num % 2; // modulo
-console.log(num);
-num +=2;
-num -=2;
-num *=2;
-num /=2;
-num **=2;
-num %=2;
-console.log(num);
-num++;
-console.log(num);
-num--;
-console.log(num);
-num = Math.sqrt(9);
-console.log(num);
+let bool = true;
+bool = false;
+bool = true && false; // AND
+bool = false && true; // AND
+bool = true && true; // AND
+bool = false && false // AND
+bool = true || false; // OR
+bool = false || true; // OR
+bool = false || false; // OR
+bool = true || true; // OR
+bool = !true; //NOT
+bool = !false;
+
+bool = (true || false && true) && !(false || false || true || true);
+
+console.log(bool);
+bool = 10 > 5;
+console.log(bool);
+bool = 10 < 5;
+console.log(bool);
+bool = 10 > 10;
+console.log(bool);
+bool = 10 == 10;
+console.log(bool);
+bool = 10 <= 5;
+bool = 10 >= 5;
+console.log(bool);
+bool = 10 != 4;
+console.log(bool);
+bool = '10' == 10;
+console.log(bool);
+bool = 10 === 10;
+console.log(bool);
+bool = 10 !== 10;
+
+
