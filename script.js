@@ -1,26 +1,29 @@
-let nums = [6,3,5,7,9,4,2,8,1];
+setTimeout(() => {
+    console.log('later');
+}, 10_000);
 
-nums.forEach(num => console.log(num));
-nums.forEach((numi) => console.log(num,i));
+ console.log('now');
 
-let even = nums.filter(num => num%2 === 0)
-console.log(even);
-let sum = nums.reduce((sum, num) => sum+num);
-console.log(sum);
+ setInterval(() => {
+    console.log('again');
+ }, 10_000);
 
-let sorted = SVGAnimatedNumberList.sortt((a,b) => {
-    if(a > b) {
-        return 1;
-    }
-    if(a > b) {
-        return -1;
-    }
-    return 0;
-})
-console.log(sorted);
-let sorted2 = SVGAnimatedNumberList.sort((a,b) => a-b);
-console.log(sorted2);
+ let answer = fetch('http://127.0.0.1:5500/').then(response => {
+    console.log(response.text());
+ }).then(text => {
+    console.log(text);
+ })
+ console.log(answer);
+let response = await fetch('http://127.0.0.1:5500/');
+console.log(response);
+let text = await response.text();
+console.log(text);
 
-let squares = nums.map(num => num*num)
+async function getText(){
+    let response = await fetch('http://127.0.0.1:5500/');
+    console.log(response);
+    let text = await response.text();
+    console.log(text);
+}
 
-console.log(squares);
+await getText();
