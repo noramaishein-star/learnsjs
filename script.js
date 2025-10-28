@@ -1,18 +1,26 @@
-let nums = [1, 2, 3, 4];
-let moreNums = [5, 6, ...nums, 7, 8];
-console.log(moreNums);
+let nums = [6,3,5,7,9,4,2,8,1];
 
-function sum(...args) {
-    console.log(args);
-    let sum =0
-    for(let i=0; i<args.length; i++) {
-        sum+=args[i];
+nums.forEach(num => console.log(num));
+nums.forEach((numi) => console.log(num,i));
+
+let even = nums.filter(num => num%2 === 0)
+console.log(even);
+let sum = nums.reduce((sum, num) => sum+num);
+console.log(sum);
+
+let sorted = SVGAnimatedNumberList.sortt((a,b) => {
+    if(a > b) {
+        return 1;
     }
-    return sum;
-}
+    if(a > b) {
+        return -1;
+    }
+    return 0;
+})
+console.log(sorted);
+let sorted2 = SVGAnimatedNumberList.sort((a,b) => a-b);
+console.log(sorted2);
 
-sum(1,2);
-let a = sum(1,2,3,4,5,6,7,8,9);
-console.log(a);
-a = sum(...moreNums);
-console.log(a);
+let squares = nums.map(num => num*num)
+
+console.log(squares);
