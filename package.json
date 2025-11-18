@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/noramaishein-star/learnsjs#readme",
   "dependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
     "bluma": "^2.0.16",
     "bulma": "^1.0.4",
     "vite": "^7.1.12"
