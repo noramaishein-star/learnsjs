@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue';
-
+import ItemList from './ItemList.vue';
 
 let message = ref('Hello Vue');
 let isDanger = ref(false);
@@ -20,6 +20,8 @@ function add() {
 }
 
 let doneItems = computed(() => items.value.filter(item => item.isDone));
+let toDoItems = computed(() => items.value.filter(item => !item.isDone));
+
 
 
 </script>
@@ -44,21 +46,9 @@ let doneItems = computed(() => items.value.filter(item => item.isDone));
       </div>
       <h1>{{ newItem.split('').reverse().join('') }}</h1>
 
-      <h1>All Items</h1>
-      <ul>
-        <li v-for="item in items">
-          {{ item.name }}
-          <input type="checkbox" v-model="item.isDone">
-        </li>
-      </ul>
-
-      <h1>Done Items</h1>
-      <ul>
-        <li v-for="item in doneItems">
-          {{ item.name }}
-          <input type="checkbox" v-model="item.isDone">
-        </li>
-      </ul>
+      <ItemList :items="items" title="All Items"></ItemList>
+      <ItemList :items="doneItems" title="Done Items"></ItemList>
+      <ItemList :items="toDoItems" title="toDo Items"></ItemList>
     </div>
   </div>
 </template>
